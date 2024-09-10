@@ -18,6 +18,14 @@ RSpec.describe DigitSum do
       expect(digit_sum.sum_digits(9999999999)).to eq(9)
     end
 
+    it 'returns 9 for the input 18' do
+      expect(digit_sum.sum_digits(18)).to eq(9)
+    end
+
+    it 'returns 5 for the input 1463' do
+      expect(digit_sum.sum_digits(1463)).to eq(5)
+    end
+
     it 'raises an error for negative numbers' do
       expect { digit_sum.sum_digits(-1) }.to raise_error(ArgumentError, 'Input must be a positive integer')
     end
@@ -47,6 +55,14 @@ RSpec.describe DigitSum do
 
     it 'returns 9 for the input 9999999999' do
       expect(digit_sum.digital_root(9999999999)).to eq(9)
+    end
+
+    it 'returns 9 for the input 18' do
+      expect(digit_sum.digital_root(18)).to eq(9)
+    end
+
+    it 'returns 5 for the input 1463' do
+      expect(digit_sum.digital_root(1463)).to eq(5)
     end
 
     it 'it handles multiples of 9 correctly' do
